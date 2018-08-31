@@ -18,10 +18,9 @@ repositories {
 
 test {     
  useTestNG() {      
-     // useDefaultTestNG = true      
-      //suiteXmlFilesm << 
+      
       new File("./testng.xml")         
-     // setSuiteXmlFiles(suiteXmlFiles)    
+         
     }
 }
 
