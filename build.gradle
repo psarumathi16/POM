@@ -62,9 +62,10 @@ dependencies {
 	compile group: 'io.cucumber', name: 'cucumber-java', version: '3.0.2'
 }
 test{
-useTestNG({
+useTestNG(){
 suites'testing.xml'
-}}
+}
+}
 sourcetest{
 test.java.srcDir'src/main'
 }
