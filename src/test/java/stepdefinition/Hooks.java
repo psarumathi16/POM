@@ -13,7 +13,7 @@ public class Hooks extends ProjectMethods{
 		System.out.println(name);
 		String id = sc.getId();
 		System.out.println(id);
-		
+		System.out.println();
 		
 		startResult();
 		startTestModule(sc.getName(),sc.getId());	
