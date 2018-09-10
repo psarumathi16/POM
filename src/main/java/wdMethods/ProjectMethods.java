@@ -25,16 +25,17 @@ public class ProjectMethods extends SeMethods {
 	public void beforeClass(){		
 		startTestModule(testCaseName, testDescription);	
 	}
-    @Parameters({"url"})
+    @Parameters({"url","uname","pwd"})
 	@BeforeMethod
-	public void beforeMethod(String url){
+	public void beforeMethod(String url, String uname, String pwd){
 		test = startTestCase(testNodes);
 		test.assignCategory(category);
 		test.assignAuthor(authors);
 		startApp("chrome", url);
-//		type(locateElement("id", "username"), uname);
-//		type(locateElement("id", "password"), pwd);
-//		click(locateElement("class", "decorativeSubmit"));
+		type(locateElement("id", "username"), uname);
+		type(locateElement("id", "password"), pwd);
+		click(locateElement("class", "decorativeSubmit"));
+		click(locateElement("linktext", "CRM/SFA"));
 	}
 
 	@AfterSuite

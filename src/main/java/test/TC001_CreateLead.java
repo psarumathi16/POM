@@ -4,7 +4,6 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import pages.HomePage;
-import pages.LoginPage;
 import wdMethods.ProjectMethods;
 
 public class TC001_CreateLead extends ProjectMethods {
