@@ -10,9 +10,10 @@ public class TC003_DeleteLead extends ProjectMethods {
 	@BeforeClass(groups="common")
 	public void setData() {
 		testCaseName = "TC003_DeleteLead";
-		testCaseDescription ="Delete a lead";
+		testDescription ="Delete a lead";
 		category = "Smoke";
-		author= "Babu";
+		authors= "Babu";
+		testNodes = "Leads";
 		dataSheetName="TC003";
 	}
 	@Test(dataProvider="fetchData")

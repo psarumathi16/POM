@@ -14,9 +14,10 @@ public class TC005_MergeLead extends ProjectMethods {
 	@BeforeClass(groups="common")
 	public void setData() {
 		testCaseName = "TC005_MergeLead";
-		testCaseDescription ="Merge two leads";
+		testDescription ="Merge two leads";
 		category = "Smoke";
-		author= "Babu";
+		authors= "Babu";
+		testNodes = "Leads";
 		dataSheetName="TC005";
 	}
 	@Test(dataProvider="fetchData")

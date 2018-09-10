@@ -22,11 +22,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
 
-import utils.LearnReport;
+import utils.Report;
 
-public class SeMethods extends LearnReport implements WdMethods{
+public class SeMethods extends Report implements WdMethods{
 	public int i = 1;
-	public RemoteWebDriver driver;
+	public static RemoteWebDriver driver;
 	public void startApp(String browser, String url) {
 		try {
 			if(browser.equalsIgnoreCase("chrome")){
@@ -313,15 +313,16 @@ public class SeMethods extends LearnReport implements WdMethods{
 		return text;
 	}
 
-	public void takeSnap() {
-		File src = driver.getScreenshotAs(OutputType.FILE);
-		File des = new File("./snaps/img"+i+".png");
+	public long takeSnap(){
+		long number = (long) Math.floor(Math.random() * 900000000L) + 10000000L; 
 		try {
-			FileUtils.copyFile(src, des);
+			FileUtils.copyFile(driver.getScreenshotAs(OutputType.FILE) , new File("./reports/images/"+number+".jpg"));
+		} catch (WebDriverException e) {
+			System.out.println("The browser has been closed.");
 		} catch (IOException e) {
-			System.err.println("IOException");
+			System.out.println("The snapshot could not be taken");
 		}
-		i++;
+		return number;
 	}
 
 	public void closeBrowser() {

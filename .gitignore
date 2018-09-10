@@ -1,2 +1,5 @@
 /.gradle/
 /bin/
+/reports/
+/build/
+/test-output/

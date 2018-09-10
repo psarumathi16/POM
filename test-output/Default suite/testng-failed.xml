@@ -3,16 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.MergeLead">
+      <class name="test.TC003_Delete">
         <methods>
-          <include name="close"/>
-          <include name="startTestCase"/>
-          <include name="mergeLead"/>
-          <include name="login"/>
-          <include name="stopResult"/>
-          <include name="startResult"/>
+          <include name="setData"/>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="deleteLead"/>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeClass"/>
         </methods>
-      </class> <!-- testcases.MergeLead -->
+      </class> <!-- test.TC003_Delete -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

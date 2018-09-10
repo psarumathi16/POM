@@ -10,9 +10,10 @@ public class TC004_DuplicateLead extends ProjectMethods {
 	@BeforeClass(groups="common")
 	public void setData() {
 		testCaseName = "TC004_DuplicateLead";
-		testCaseDescription ="Duplicate a lead";
+		testDescription ="Duplicate a lead";
 		category = "Smoke";
-		author= "Babu";
+		authors= "Babu";
+		testNodes = "Leads";
 		dataSheetName="TC004";
 	}
 	@Test(dataProvider="fetchData")
